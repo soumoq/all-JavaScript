@@ -28,6 +28,7 @@ var age=28;
  console.log(typeof ageCompare);
 
 
+
  //if else statement ---------------------------------------
  var stName='soumo';
  var stStatus='avg';
@@ -36,3 +37,75 @@ var age=28;
  else {
    console.log(stName+' '+stStatus);
  }
+
+
+
+var high=0;
+if(high || high === 0)
+ console.log("variable is defile");
+ else
+ console.log("variable is not defile");
+
+
+ var num=20;
+ if(num=='20')
+ console.log(true)
+  if (num === '20')
+  console.log(false)
+
+
+
+ //Switch case --------------------------------
+
+ var i=2;
+ switch(true)
+ {
+   case i>1:
+     console.log("case 1");
+     break;
+   case 22:
+     console.log("case 2");
+     break;
+   default:
+     console.log("case 3");
+     break;
+  
+ }
+
+
+
+ //function -----------------------------------
+
+ function sum(a,b)
+ {
+   return a,b;
+ }
+
+ console.log(sum(33,55));
+
+//function expression
+var whatDOYouDo = function(a,b){
+  return a+b;
+}
+
+console.log(whatDOYouDo(2,2));
+
+
+//array in js
+var allName =['soumo','Misti','Sree'];
+var allNames=new Array('soumo','Misti','Sree');
+console.log(allNames[2]);
+
+//objects
+var me={
+  fastName: 'soumo',
+  lastName: 'ganguly',
+  cdob: 2020,
+  family: ['mom','dad','brother','sister'],
+  calculate: function (dob){
+    return this.cdob-dob;
+  }
+};
+
+console.log(me.calculate(1997))
+
