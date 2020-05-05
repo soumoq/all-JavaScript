@@ -96,7 +96,7 @@ var allName =['soumo','Misti','Sree'];
 var allNames=new Array('soumo','Misti','Sree');
 console.log(allNames[2]);
 
-//objects
+//objects --------------------------------------------
 var me={
   fastName: 'soumo',
   lastName: 'ganguly',
@@ -107,5 +107,6 @@ var me={
   }
 };
 
-console.log(me.calculate(1997))
+console.log(me.calculate(1997));
+
 
