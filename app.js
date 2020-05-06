@@ -156,3 +156,20 @@ game();
     var score=Math.random()*10;
     console.log(score>=5-goodluck);
 })(5);
+
+
+
+//Closures-------------------------------------
+function retuirment(rage,cuntry)
+{
+    var a=' years untill retirments'; //Closures
+    return function(dob)
+    {
+        var age= 2020-dob;
+        console.log(rage-age+a+" for "+cuntry);
+    }
+}
+
+retuirment(65,'US')(1967);
+retuirment(60,'India')(1967);
+retuirment(67,'Iceland')(1967);
