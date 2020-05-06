@@ -173,3 +173,37 @@ function retuirment(rage,cuntry)
 retuirment(65,'US')(1967);
 retuirment(60,'India')(1967);
 retuirment(67,'Iceland')(1967);
+
+
+//Bind call and apply-----------------------------
+var soumo={
+    name:"Soumo",
+    job:"Programmer",
+    age:20,
+    presentation: function(style,timeofDay)
+    {
+        if(style==='formal')
+        {
+            console.log('good '+timeofDay+' '+this.name);
+        }
+        else if(style==='friendly')
+        {
+            console.log('whats up dude good '+timeofDay+' '+this.name);
+        }
+    }
+}
+
+var misti={
+    name:"Misti",
+    job:"Teacher"
+}
+
+var sree={
+    name:"Sree"
+}
+soumo.presentation('friendly','morning');
+soumo.presentation.call(misti,'formal','afternun');
+var sree=soumo.presentation.bind(sree,'friendly');
+sree('evening');
+sree('night');
+
