@@ -107,11 +107,33 @@ fun5(function(){
     console.log("anonymous call fun7 " +params);
 });
 
-//arrow function ------------------------------
-fun8(callback)
-{
-    var a=80;
-    callback(a);
+
+
+//function return function --------------------------------
+
+function interviewQue(job) {
+    if(job==='programmer')
+    {
+        return function(name)
+        {
+            console.log(name+" is a programmer");
+        }
+    }
+    else if(job==='teacher')
+    {   
+        return function(name)
+        {
+            console.log(name+" is a teacher");
+        }
+    }
+    else{
+        return function(name)
+        {
+            console.log(name+" go fuck your self");
+        }
+    }
 }
 
-fun8(a=>console.log("call fun8"+a));
+var que=interviewQue('programmer');
+que('Misti');
+var que1=interviewQue('lol')('soumo');
