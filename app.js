@@ -43,4 +43,75 @@ var sree =Object.create(persionProto,{
     calculateAge : {value : function(){
         2020-this.dob;
     }}
-})
+});
+
+
+//object vs premetive
+
+var a=30;
+var obj = {
+    name : 'soumo',
+    age : 20
+};
+
+var fun = function(a,b)
+{
+    a=20;
+    b.age=25;
+}
+
+fun(a,obj);
+console.log(obj.age);
+console.log(a);
+
+
+//call back function------------------------------------
+var fun1=function(a)
+{
+    console.log("call fun1 "+a);
+}
+
+var fun2=function(arg)
+{
+    var a=20;
+    console.log("call fun2");
+    arg(a);
+}
+
+fun2(fun1);
+
+
+//another way
+var fun3=function(callback)
+{
+    console.log("call fun3");
+    callback(30);
+}
+
+fun3(function fun4(a){
+    console.log("call fun4 "+a);
+});
+
+//anonymous function --------------------------------
+
+var fun5=function(callback,callback1)
+{
+    console.log("call fun5");
+    callback();
+    callback1(50);
+}
+
+fun5(function(){
+    console.log("anonymous call fun 6");
+},function (params) {
+    console.log("anonymous call fun7 " +params);
+});
+
+//arrow function ------------------------------
+fun8(callback)
+{
+    var a=80;
+    callback(a);
+}
+
+fun8(a=>console.log("call fun8"+a));
