@@ -70,3 +70,18 @@ const{fastname1,lastname1}=obj;
 console.log(fastname1);
 console.log(lastname1);
 
+//Spread operator------------------------------------------
+let ages=[1,2,2,3];
+function addAge(a,b,c,d) {
+    return a+b+c+d;
+}
+
+const sumAge=addAge(...ages)
+console.log(sumAge);
+
+//Rest paramiters
+
+function isFulAge()
+{
+    return 
+}
