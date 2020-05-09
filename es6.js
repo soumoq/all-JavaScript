@@ -79,9 +79,40 @@ function addAge(a,b,c,d) {
 const sumAge=addAge(...ages)
 console.log(sumAge);
 
-//Rest paramiters
-
-function isFulAge()
-{
-    return 
+//Classes
+function Cat(){
+    this.legs = 4;
+    this.temperament = 'Apathetic';
+    this.sound = 'Meow';
 }
+
+Cat.prototype.speak = function(){
+    return (this.sound)
+}
+
+var cat = new Cat();
+var speaknow=cat.speak();
+console.log(speaknow);
+
+
+
+
+
+class Persion6
+{
+    constructor(name,yob,job)
+    {
+        this.name=name;
+        this.yob=yob;
+        this.job=job;
+    }
+
+    calculateAge()
+    {
+        return 2020-this.yob;
+    }
+}
+
+const soumo6=new Persion6('soumo',1997,'programmer');
+console.log(soumo6.calculateAge());
+ 
